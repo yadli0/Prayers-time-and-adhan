@@ -1,0 +1,290 @@
+:root {
+    --pc: #537D5D;
+    --pcb: #9EBC8A;
+    --pcl: #D2D0A0;
+}
+
+@font-face {
+    font-family: ku;
+    src: url(font/kuffi.ttf);
+}
+
+html,
+body {
+    user-select: none;
+    font-family: ku;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fdfbf7;
+    width: 350px;
+    height: 600px;
+
+}
+
+
+/* MARK: main_sec */
+#main_sec>nav {
+    overflow: hidden;
+    padding: 18px 24px 6px 24px;
+}
+
+#main_sec>nav .title {
+    display: inline-block;
+    margin-top: 4px;
+    width: 200px;
+    text-align: center;
+
+}
+
+#main_sec>nav .month-calendar {
+    float: right;
+}
+
+#main_sec>nav .settings {
+    float: left;
+}
+
+/* MARK:timer */
+#main_sec>.timer img {
+    margin-bottom: -5px;
+}
+
+#main_sec>.timer {
+    z-index: 0;
+    position: relative;
+    padding: 12px 8px;
+    margin: 8px 24px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--pc);
+    box-shadow: 0px 0px 5px 0px var(--pc);
+    /* background: linear-gradient(45deg,var(--pc) 0%, var(--pcl) 100%); */
+}
+
+#main_sec>.timer #prayer_icon {
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    left: 8px;
+    top: 24px;
+    width: 120px;
+}
+
+#main_sec>.timer .time {
+    padding: 8px 0;
+}
+
+#main_sec>.timer .time #details{
+    margin: 4px 2px;
+    font-size: 10px;
+    color: #b1cc9e;
+}
+
+#main_sec>.timer .time .prayer-name {
+    color: #ddd;
+    margin: 0;
+    font-size: 24px;
+
+}
+
+#main_sec>.timer .time .countDown {
+    color: white;
+    margin: 0 auto;
+    margin-top: -4px;
+    margin-bottom: -8px;
+    font-size: 40px;
+}
+
+#main_sec>.timer .location {
+    font-size: 13px;
+    color: #ffffff8e;
+}
+
+#main_sec>.timer .date {
+    border-radius: 16px;
+    padding: 6px;
+    background-color: #ffffff48;
+    font-size: 10px;
+    width: fit-content;
+    color: white;
+}
+
+
+/* MARK:prayers */
+#main_sec>#prayers {
+    padding: 0;
+    margin: 24px 24px 0 24px;
+    list-style: none;
+    color: #666;
+}
+
+#main_sec>#prayers li[current] {
+    background-color: #f1f1e2;
+    box-shadow: 0px 0px 2px 0px var(--pc);
+}
+
+
+#main_sec>#prayers li {
+    background-color: white;
+    margin: 8px 0;
+    padding: 8px;
+    box-shadow: 0px 0px 2px 0px var(--pcb);
+    border-radius: 8px;
+}
+
+/* #prayers li[d]{
+    background-color: var(--pcl);
+} */
+
+#main_sec>#prayers span {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+#main_sec>#prayers li .ic {
+    margin-top: -2px;
+    float: right;
+}
+
+#main_sec>#prayers img {
+    overflow: hidden;
+    margin-left: 8px;
+    margin-top: 1px;
+}
+
+#main_sec>#prayers .bell{
+    
+    float: left;
+}
+
+#main_sec>#prayers .time {
+    margin-left: 5px;
+    margin-top: 1.5px;
+    float: left;
+}
+
+
+
+/* MARK: month_calendar_sec */
+#month_calendar_sec nav {
+    overflow: hidden;
+    padding: 18px 24px;
+}
+
+#month_calendar_sec nav #month_year {
+    text-align: center;
+    display: inline-block;
+    width: calc(100% - 48px);
+    color: #666;
+    margin: 0;
+    border-radius: 16px;
+    font-size: 15px;
+    padding: 2px 0;
+    color: var(--pc);
+}
+
+#month_calendar_sec nav #close {
+    margin-top: 2px;
+    float: right;
+}
+
+#month_calendar_sec ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: #111;
+}
+
+#month_calendar_sec .prayers {
+    box-shadow: 0px 0px 5px 0px #b1cc9e;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    margin: 0px 12px;
+}
+
+#month_calendar_sec #list {
+    margin: 0 auto;
+    border-radius: 0 0 8px 8px;
+    width: calc(100% - 24px);
+    box-shadow: 0px 0px 5px 0px #ddd;
+    background-color: white;
+    position: relative;
+    overflow-y: auto;
+    height: 450px;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#month_calendar_sec #list>li {
+    padding: 0;
+}
+
+#month_calendar_sec .prayers li {
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    float: right;
+    padding: 8px 3px;
+    width: calc(100% / 7 - 6px);
+    background-color: var(--pcb);
+}
+
+#month_calendar_sec .prayers li[d] {
+    background-color: #b1cc9e;
+}
+
+#month_calendar_sec .times {
+    width: 100%;
+    height: 35px;
+    background-color: white;
+
+}
+
+#month_calendar_sec .times:hover {
+    background-color: #f1f1f1;
+}
+
+#month_calendar_sec .times li {
+    font-size: 12px;
+    text-align: center;
+    float: right;
+    padding: 8px 3px;
+    width: calc(100% / 7 - 6px);
+    border-bottom: solid 1px #eee;
+}
+
+#month_calendar_sec .times[today] {
+    position: relative;
+}
+
+#month_calendar_sec .times[today]::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    background-color: var(--pcb);
+    width: 2px;
+    height: 34px;
+
+}
+
+#month_calendar_sec .times[today] li {
+    background-color: #f4fded;
+}
+
+#month_calendar_sec .times[today] li[d] {
+    background-color: #e7f5dd;
+}
+
+#month_calendar_sec .times li[d] {
+    background-color: #00000007;
+}

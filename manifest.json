@@ -18,5 +18,6 @@
     "background":{
         "service_worker":"ui/script/background.js"
     },
-    "permissions":["storage","alarms","notifications","offscreen"]
+    "permissions":["storage","alarms","notifications","offscreen"],
+    "host_permissions": ["https://api.bigdatacloud.net/*","https://api.aladhan.com/*"]
 }

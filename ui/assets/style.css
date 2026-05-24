@@ -20,7 +20,7 @@ body {
 
 body {
     background-color: #fdfbf7;
-    width: 350px;
+    width: 375px;
     height: 600px;
 
 }
@@ -37,11 +37,70 @@ body {
     margin-top: 4px;
     width: 200px;
     text-align: center;
-
 }
 
 #main_sec>nav .month-calendar {
     float: right;
+}
+
+#main_sec>nav #lang-switch{
+    position: relative;
+    font-size: 18px;
+    float: left;
+    border-radius: 20px;
+    width: 60px;
+    height: 25px;
+    border: 2px solid var(--pcb);
+}
+
+#main_sec>nav #lang-switch>span{
+    width: 30px;
+    height: 100%;
+    text-align: center;
+    float: right;
+}
+
+#main_sec>nav #lang-switch[ar]::before{
+    z-index: -1;
+    content: '';
+    width: 50%;
+    height: 25px;
+    position: absolute;
+    background-color: var(--pcb);
+    border-radius: 15px;
+    right: 0;
+    top: 0;
+}
+#main_sec>nav #lang-switch[en]::before{
+    z-index: -1;
+    content: '';
+    width: 50%;
+    height: 25px;
+    position: absolute;
+    background-color: var(--pcb);
+    border-radius: 15px;
+    left: 0;
+    top: 0;
+}
+
+#main_sec>nav #lang-switch[ar] .en{
+    color: var(--pc);
+    opacity: 0.5;
+}
+#main_sec>nav #lang-switch[ar] .ar{
+    color: white;
+}
+
+#main_sec>nav #lang-switch[en] .en{
+    color: white;
+}
+#main_sec>nav #lang-switch[en] .ar{
+    color: var(--pc);
+    opacity: 0.5;
+}
+
+#main_sec>nav #lang-switch>.ar{
+    margin-top: -4px;
 }
 
 #main_sec>nav .settings {
@@ -56,13 +115,12 @@ body {
 #main_sec>.timer {
     z-index: 0;
     position: relative;
-    padding: 12px 8px;
+    padding: 12px;
     margin: 8px 24px;
     overflow: hidden;
     border-radius: 20px;
     background-color: var(--pc);
     box-shadow: 0px 0px 5px 0px var(--pc);
-    /* background: linear-gradient(45deg,var(--pc) 0%, var(--pcl) 100%); */
 }
 
 #main_sec>.timer #prayer_icon {
@@ -74,22 +132,35 @@ body {
     width: 120px;
 }
 
+body[en] #main_sec>.timer #prayer_icon {
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    right: 8px;
+    top: 24px;
+    width: 120px;
+}
+
 #main_sec>.timer .time {
     padding: 8px 0;
 }
 
 #main_sec>.timer .time #details{
+     unicode-bidi: plaintext;
     margin: 4px 2px;
     font-size: 10px;
     color: #b1cc9e;
+    
 }
 
 #main_sec>.timer .time .prayer-name {
+    unicode-bidi: plaintext;
     color: #ddd;
     margin: 0;
     font-size: 24px;
-
+    overflow: hidden;
 }
+
 
 #main_sec>.timer .time .countDown {
     color: white;
@@ -99,9 +170,34 @@ body {
     font-size: 40px;
 }
 
+body[en] #main_sec>.timer .time .countDown {
+    text-align: left;
+}
+
 #main_sec>.timer .location {
+    width: 100%;
     font-size: 13px;
     color: #ffffff8e;
+    display: inline-block;
+}
+
+
+body[en] #main_sec>.timer .location img{
+    float: left;
+}
+body[en] #main_sec>.timer #location {
+    float: left;
+    margin: 0;
+}
+
+
+body[en] #main_sec>.timer .date{
+    float: left;
+}
+
+body[en] #main_sec>.timer #date{
+    float: right;
+    margin: 0 5px;
 }
 
 #main_sec>.timer .date {
@@ -115,20 +211,21 @@ body {
 
 
 /* MARK:prayers */
-#main_sec>#prayers {
+#main_sec>#today_prayers {
     padding: 0;
     margin: 24px 24px 0 24px;
     list-style: none;
     color: #666;
 }
 
-#main_sec>#prayers li[current] {
+#main_sec>#today_prayers li[current] {
     background-color: #f1f1e2;
     box-shadow: 0px 0px 2px 0px var(--pc);
 }
 
-
-#main_sec>#prayers li {
+#main_sec>#today_prayers li {
+    height: 25px;
+    overflow: hidden;
     background-color: white;
     margin: 8px 0;
     padding: 8px;
@@ -136,39 +233,52 @@ body {
     border-radius: 8px;
 }
 
-/* #prayers li[d]{
-    background-color: var(--pcl);
-} */
-
-#main_sec>#prayers span {
+#main_sec>#today_prayers span {
     margin: 0;
     padding: 0;
     font-size: 15px;
     overflow: hidden;
 }
 
-#main_sec>#prayers li .ic {
+body[en] #main_sec>#today_prayers li .ic{
+    float: left;
+}
+
+
+body[en] #main_sec>#today_prayers li .time{
+    float: right;
+}
+
+body[en] #main_sec>#today_prayers li .bell{
+    float: right;
+}
+
+body[en] #main_sec>#today_prayers li .name{
+    margin: 3px 0 0 8px;
+    float: left;
+}
+
+
+#main_sec>#today_prayers li .ic {
     margin-top: -2px;
     float: right;
 }
 
-#main_sec>#prayers img {
+#main_sec>#today_prayers img {
     overflow: hidden;
     margin-left: 8px;
     margin-top: 1px;
 }
 
-#main_sec>#prayers .bell{
-    
+#main_sec>#today_prayers .bell{
     float: left;
 }
 
-#main_sec>#prayers .time {
+#main_sec>#today_prayers .time {
     margin-left: 5px;
     margin-top: 1.5px;
     float: left;
 }
-
 
 
 /* MARK: month_calendar_sec */

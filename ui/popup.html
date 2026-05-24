@@ -9,6 +9,10 @@
         <div id="main_sec">
             <nav>
                 <span id="month-calendar" class="month-calendar"><img src="assets/img/cale.svg"></span>
+                <span id="lang-switch">
+                    <span class="ar">ع</span>
+                    <span class="en">En</span>
+                </span>
             </nav>
             <div class="timer">
                 <div class="location">
@@ -18,7 +22,7 @@
                 <div class="time">
                     <p id="nextPrayerName" class="prayer-name"></p>
                     <p id="details"></p>
-                    <p id="countDown" class="countDown">00:00:00</p>
+                    <p id="countDown" class="countDown"></p>
                 </div>
                 <div class="date">
                     <span><img src="assets/img/calendar.svg"></span>
@@ -26,7 +30,7 @@
                 </div>
                 <img id="prayer_icon">
             </div>
-            <ul id="prayers">
+            <ul id="today_prayers">
             </ul>
         </div>
         <div id="month_calendar_sec" style="display: none;">
@@ -34,14 +38,7 @@
                 <h4 id="month_year"></h4>
                 <span id="close"><img src="assets/img/right.svg"></span>
             </nav>
-            <ul class="prayers">
-                <li></li>
-                <li d>الفجر</li>
-                <li>الشروق</li>
-                <li d>الظهر</li>
-                <li>العصر</li>
-                <li d>المغرب</li>
-                <li>العشاء</li>
+            <ul id="month_prayers" class="prayers">
             </ul>
             <ul id="list">
             </ul>

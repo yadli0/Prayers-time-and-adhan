@@ -4,15 +4,15 @@
     "version":"1.0",
     "description":"اوقات الصلاة و الاذان",
     "icons":{
-        "16":"icon/icon16.png",
-        "48":"icon/icon48.png",
-        "128":"icon/icon128.png"
+        "16":"icon/16.png",
+        "48":"icon/48.png",
+        "128":"icon/128.png"
     },
     "action":{
         "default_popup":"ui/popup.html",
         "default_icon":{
-            "16":"icon/icon16.png",
-            "48":"icon/icon48.png"
+            "16":"icon/16.png",
+            "48":"icon/48.png"
         }
     },
     "background":{

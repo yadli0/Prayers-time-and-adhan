@@ -138,7 +138,6 @@ async function setupMonthCalendar(date,prayers){
 }
 
 
-//MARK:alarms
 function setupAlarms(prayers,alarms) {
     chrome.alarms.clearAll(()=>{
         let currentTime= new Date();
@@ -218,13 +217,13 @@ document.addEventListener('DOMContentLoaded',async()=>{// عند ظهور الو
     const monthYear = `_${date.chahr.value}${date.sana.value}`;
     const monthCalendar = await storage.get({[monthYear]: null});
     const geoloc = await storage.get({"cords":null});
-    const alarms = await storage.get({"alarms":null});// mochkila hna
+    const alarms = await storage.get({"alarms":null});
     const langSwitch = gebId("lang-switch");
     lang = await storage.get({'lang':'ar'});
     if(lang.lang==='ar'){
         prayerNames = ['الفجر','الشروق','الظهر','العصر','المغرب','العشاء'];
     }else{
-        prayerNames = ['Fajr','Shurooq','Duhr','Asr','Maghreb','Isha']
+        prayerNames = ['Fajr','Shurooq','Duhr','Asr','Maghreb','Isha'];
     }
     document.body.setAttribute(lang.lang,'');
     langSwitch.setAttribute(lang.lang,'');

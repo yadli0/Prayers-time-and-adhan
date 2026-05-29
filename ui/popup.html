@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/ui/assets/style.css">
-    </head>
-    <body>
-        <div id="main_sec">
-            <nav>
-                <span id="month-calendar" class="month-calendar"><img src="assets/img/cale.svg"></span>
-                <span id="lang-switch">
-                    <span class="ar">ع</span>
-                    <span class="en">En</span>
-                </span>
-            </nav>
-            <div class="timer">
-                <div class="location">
-                    <img src="assets/img/location.svg" alt="">
-                    <span id="location"></span>
-                </div>
-                <div class="time">
-                    <p id="nextPrayerName" class="prayer-name"></p>
-                    <p id="details"></p>
-                    <p id="countDown" class="countDown"></p>
-                </div>
-                <div class="date">
-                    <span><img src="assets/img/calendar.svg"></span>
-                    <span id="date"></span>
-                </div>
-                <img id="prayer_icon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ui/assets/style.css">
+</head>
+<body>
+    <div id="main_sec">
+        <nav>
+            <span id="month-calendar" class="month-calendar"><img src="assets/img/cale.svg"></span>
+            <span id="lang-switch">
+                <span class="ar">ع</span>
+                <span class="en">En</span>
+            </span>
+        </nav>
+        <div class="timer">
+            <div class="location">
+                <img src="assets/img/location.svg" alt="">
+                <span id="location"></span>
             </div>
-            <ul id="today_prayers">
-            </ul>
+            <div class="time">
+                <p id="nextPrayerName" class="prayer-name"></p>
+                <p id="details"></p>
+                <p id="countDown" class="countDown"></p>
+            </div>
+            <div class="date">
+                <span><img src="assets/img/calendar.svg"></span>
+                <span id="date"></span>
+            </div>
+            <img id="prayer_icon">
         </div>
-        <div id="month_calendar_sec" style="display: none;">
-            <nav>
-                <h4 id="month_year"></h4>
-                <span id="close"><img src="assets/img/right.svg"></span>
-            </nav>
-            <ul id="month_prayers" class="prayers">
-            </ul>
-            <ul id="list">
-            </ul>
-        </div>
-        <script src="/ui/script/popup.js"></script>
-    </body>
-
+        <ul id="today_prayers">
+        </ul>
+    </div>
+    <div id="month_calendar_sec" style="display: none;">
+        <nav>
+            <h4 id="month_year"></h4>
+            <span id="close"><img src="assets/img/right.svg"></span>
+        </nav>
+        <ul id="month_prayers" class="prayers">
+        </ul>
+        <ul id="list">
+        </ul>
+    </div>
+    <script src="/ui/script/popup.js"></script>
+</body>
 </html>

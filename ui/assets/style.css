@@ -43,7 +43,7 @@ body {
     float: right;
 }
 
-#main_sec>nav #lang-switch{
+#main_sec>nav #lang-switch {
     position: relative;
     font-size: 18px;
     float: left;
@@ -53,14 +53,14 @@ body {
     border: 2px solid var(--pcb);
 }
 
-#main_sec>nav #lang-switch>span{
+#main_sec>nav #lang-switch>span {
     width: 30px;
     height: 100%;
     text-align: center;
     float: right;
 }
 
-#main_sec>nav #lang-switch[ar]::before{
+#main_sec>nav #lang-switch[ar]::before {
     z-index: -1;
     content: '';
     width: 50%;
@@ -71,7 +71,8 @@ body {
     right: 0;
     top: 0;
 }
-#main_sec>nav #lang-switch[en]::before{
+
+#main_sec>nav #lang-switch[en]::before {
     z-index: -1;
     content: '';
     width: 50%;
@@ -83,23 +84,25 @@ body {
     top: 0;
 }
 
-#main_sec>nav #lang-switch[ar] .en{
-    color: var(--pc);
-    opacity: 0.5;
-}
-#main_sec>nav #lang-switch[ar] .ar{
-    color: white;
-}
-
-#main_sec>nav #lang-switch[en] .en{
-    color: white;
-}
-#main_sec>nav #lang-switch[en] .ar{
+#main_sec>nav #lang-switch[ar] .en {
     color: var(--pc);
     opacity: 0.5;
 }
 
-#main_sec>nav #lang-switch>.ar{
+#main_sec>nav #lang-switch[ar] .ar {
+    color: white;
+}
+
+#main_sec>nav #lang-switch[en] .en {
+    color: white;
+}
+
+#main_sec>nav #lang-switch[en] .ar {
+    color: var(--pc);
+    opacity: 0.5;
+}
+
+#main_sec>nav #lang-switch>.ar {
     margin-top: -4px;
 }
 
@@ -145,12 +148,12 @@ body[en] #main_sec>.timer #prayer_icon {
     padding: 8px 0;
 }
 
-#main_sec>.timer .time #details{
-     unicode-bidi: plaintext;
+#main_sec>.timer .time #details {
+    unicode-bidi: plaintext;
     margin: 4px 2px;
     font-size: 10px;
     color: #b1cc9e;
-    
+
 }
 
 #main_sec>.timer .time .prayer-name {
@@ -182,20 +185,21 @@ body[en] #main_sec>.timer .time .countDown {
 }
 
 
-body[en] #main_sec>.timer .location img{
+body[en] #main_sec>.timer .location img {
     float: left;
 }
+
 body[en] #main_sec>.timer #location {
     float: left;
     margin: 0;
 }
 
 
-body[en] #main_sec>.timer .date{
+body[en] #main_sec>.timer .date {
     float: left;
 }
 
-body[en] #main_sec>.timer #date{
+body[en] #main_sec>.timer #date {
     float: right;
     margin: 0 5px;
 }
@@ -240,20 +244,20 @@ body[en] #main_sec>.timer #date{
     overflow: hidden;
 }
 
-body[en] #main_sec>#today_prayers li .ic{
+body[en] #main_sec>#today_prayers li .ic {
     float: left;
 }
 
 
-body[en] #main_sec>#today_prayers li .time{
+body[en] #main_sec>#today_prayers li .time {
     float: right;
 }
 
-body[en] #main_sec>#today_prayers li .bell{
+body[en] #main_sec>#today_prayers li .bell {
     float: right;
 }
 
-body[en] #main_sec>#today_prayers li .name{
+body[en] #main_sec>#today_prayers li .name {
     margin: 3px 0 0 8px;
     float: left;
 }
@@ -270,7 +274,7 @@ body[en] #main_sec>#today_prayers li .name{
     margin-top: 1px;
 }
 
-#main_sec>#today_prayers .bell{
+#main_sec>#today_prayers .bell {
     float: left;
 }
 

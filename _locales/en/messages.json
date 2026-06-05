@@ -1,0 +1,8 @@
+{
+    "extName":{
+        "message":"Prayer Times & Adhan Reminder"
+    },
+    "extDesc":{
+        "message":"Tracks local prayer times, coordinates geolocation, and Adhan alerts for every prayer"
+    }
+}

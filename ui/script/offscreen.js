@@ -3,6 +3,7 @@ chrome.runtime.onMessage.addListener((message,sender,sendResponse)=>{// انتظ
     if(message.target=='offscreen-audio'){// تشغيل صوت الاذان
         startAdan()
     }else if(message.action==='STOP_AUDIO'){// ايقاف صوت الاذان
+        playing=false;
         audio.pause();
         audio.src='';
         audio.load();
@@ -12,8 +13,10 @@ chrome.runtime.onMessage.addListener((message,sender,sendResponse)=>{// انتظ
 function startAdan() {
     audio = new Audio('/ui/assets/media/Adhan.mp3');// تحميل ملف صوت الاذان
     audio.volume = 0.5;
-    audio.onended=()=>{// ارسال امر باغلاق الاشعار عند انتهاء الاذان
-      chrome.runtime.sendMessage({target:"closeNotification"});
+    audio.onended = () => {// ارسال امر باغلاق الاشعار عند انتهاء الاذان
+        chrome.runtime.sendMessage({ target: "closeNotification" });
     };
     audio.play();
+    playing = true;
+   
 }
